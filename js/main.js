@@ -1,0 +1,9 @@
+
+const menuButton = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("active");
+  });
+}

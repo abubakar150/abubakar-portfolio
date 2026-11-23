@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the web development, WordPress and e-commerce projects by Hafiz Muhammad Abubakar Bhatti.">
+  <title>My Projects | Abubakar Bhatti</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .projects-hero {
+      text-align: center;
+      padding: 85px 7% 55px;
+    }
+
+    .projects-hero h1 {
+      font-size: clamp(38px, 5vw, 60px);
+      margin: 18px 0;
+    }
+
+    .projects-hero h1 span,
+    .project-content h2 span {
+      color: var(--green-light);
+    }
+
+    .projects-hero p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .projects-section {
+      padding: 30px 7% 90px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--green-light);
+    }
+
+    .project-visual {
+      min-height: 190px;
+      background: linear-gradient(135deg, #12372D, #080D0C);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-visual span {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--green-light);
+      text-align: center;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-category {
+      color: var(--green-light);
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .project-content h2 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .project-tags span {
+      font-size: 11px;
+      padding: 7px 11px;
+      background: rgba(0,168,120,0.10);
+      color: var(--green-light);
+      border-radius: 20px;
+    }
+
+/* Project Images Styling */
+
+.project-visual {
+    width: 100%;
+    height: 230px;
+    min-height: 230px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #12372D, #080D0C);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-visual img {
+    transform: scale(1.04);
+}
+
+/* Academic and Personal Project Text */
+
+.project-visual span {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--green-light);
+    text-align: center;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 750px) {
+    .project-visual {
+        height: 210px;
+        min-height: 210px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-visual {
+        height: 185px;
+        min-height: 185px;
+    }
+
+    .project-visual span {
+        font-size: 24px;
+    }
+}
+
+
+    .project-link {
+      color: var(--green-light);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .personal-projects {
+      margin-top: 70px;
+    }
+
+    .personal-projects h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .personal-projects > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 750px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-section {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">AB<span>.</span></a>
+
+    <nav class="navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="header-btn" href="contact.html">Let's Talk ↗</a>
+
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      ☰
+    </button>
+  </header>
+
+  <main>
+
+    <section class="projects-hero">
+      <p class="eyebrow">MY PORTFOLIO</p>
+      <h1>Featured <span>Projects</span></h1>
+      <p>
+        A selection of websites, e-commerce platforms and
+        development projects I have worked on.
+      </p>
+    </section>
+
+    <section class="projects-section">
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-visual">
+              <img src="../images/project-mwp.jpg" alt="MWP Website">
+          </div>
+          <div class="project-content">
+            <div class="project-category">Business Website</div>
+            <h2>MWP</h2>
+            <p>
+              A business website project focused on presenting
+              services and providing an online business presence.
+            </p>
+            <div class="project-tags">
+              <span>WordPress</span>
+              <span>Web Development</span>
+            </div>
+            <a class="project-link" href="https://mwp.com.pk/" target="_blank" rel="noopener noreferrer">
+              Visit Website ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-visual">
+              <img src="../images/project-pkmall.jpg" alt="MWP Website">
+          </div>
+          <div class="project-content">
+            <div class="project-category">E-commerce</div>
+            <h2>PKMALL</h2>
+            <p>
+              An online shopping platform with product listings,
+              wholesale shops and customized shopping features.
+            </p>
+            <div class="project-tags">
+              <span>WooCommerce</span>
+              <span>WordPress</span>
+              <span>SEO</span>
+            </div>
+            <a class="project-link" href="https://pkmall.pk/" target="_blank" rel="noopener noreferrer">
+              Visit Website ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-visual">
+              <img src="../images/project-crystalwebeasy.jpg" alt="MWP Website">
+          </div>
+          <div class="project-content">
+            <div class="project-category">Web Development</div>
+            <h2>Crystal Web Easy</h2>
+            <p>
+              A web development business website project
+              focused on online services and digital presence.
+            </p>
+            <div class="project-tags">
+              <span>WordPress</span>
+              <span>Website Design</span>
+            </div>
+            <a class="project-link" href="https://crystalwebeasy.com/" target="_blank" rel="noopener noreferrer">
+              Visit Website ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="project-visual">
+              <img src="../images/project-mwpbnp.jpg" alt="MWP Website">
+          </div>
+          <div class="project-content">
+            <div class="project-category">Business Website</div>
+            <h2>MWPBNP</h2>
+            <p>
+              A business website included in my professional
+              web development project experience.
+            </p>
+            <div class="project-tags">
+              <span>WordPress</span>
+              <span>Web Development</span>
+            </div>
+            <a class="project-link" href="https://mwpbnp.com/" target="_blank" rel="noopener noreferrer">
+              Visit Website ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <div class="project-visual">
+              <img src="../images/project-mwpbnp-pk.jpg" alt="MWP Website">
+          </div>
+          <div class="project-content">
+            <div class="project-category">Business Website</div>
+            <h2>MWPBNP.pk</h2>
+            <p>
+              Another business website project included in
+              my web development portfolio.
+            </p>
+            <div class="project-tags">
+              <span>WordPress</span>
+              <span>Website Development</span>
+            </div>
+            <a class="project-link" href="https://mwpbnp.pk/" target="_blank" rel="noopener noreferrer">
+              Visit Website ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card">
+          <div class="project-visual">
+              <img src="../images/project-quranclasses.png" alt="MWP Website">
+          </div>
+          <div class="project-content">
+            <div class="project-category">Online Learning</div>
+            <h2>Quran Classes Online</h2>
+            <p>
+              An online Quran learning platform with a
+              PHP-based system.
+            </p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>Web Development</span>
+            </div>
+            <a class="project-link" href="https://quranclasses.online/" target="_blank" rel="noopener noreferrer">
+              Visit Website ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+<!-- Academic & AI Projects -->
+<div class="personal-projects">
+
+  <h2>Academic & <span style="color:var(--green-light)">AI Projects</span></h2>
+
+  <p>My academic, artificial intelligence and machine learning work.</p>
+
+  <div class="projects-grid">
+
+    <article class="project-card">
+      <div class="project-visual">
+        <span>SMART AGRICULTURE</span>
+      </div>
+
+      <div class="project-content">
+        <div class="project-category">Final Year Project</div>
+        <h2>Smart Agriculture Monitoring System</h2>
+
+        <p>
+          An IoT-based smart agriculture system that monitors
+          environmental and soil conditions and provides
+          intelligent crop recommendations.
+        </p>
+
+        <div class="project-tags">
+          <span>ESP32</span>
+          <span>Arduino Nano</span>
+          <span>IoT Sensors</span>
+          <span>Firebase</span>
+          <span>Flask</span>
+        </div>
+
+        <span class="project-link">Academic Project</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-visual">
+        <span>AI / ML</span>
+      </div>
+
+      <div class="project-content">
+        <div class="project-category">Machine Learning</div>
+        <h2>Crop Recommendation Using Random Forest</h2>
+
+        <p>
+          A machine learning solution using a Random Forest
+          classifier to analyze agricultural input data and
+          recommend suitable crops.
+        </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Machine Learning</span>
+          <span>Random Forest</span>
+          <span>Data Science</span>
+        </div>
+
+        <span class="project-link">AI / ML Project</span>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+
+      <!-- Personal Projects -->
+      <div class="personal-projects">
+        <h2>Personal <span style="color:var(--green-light)">Projects</span></h2>
+        <p>Projects currently under development or personal exploration.</p>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-visual">
+              <span>BL MALL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Personal E-commerce Project</div>
+              <h2>BL Mall.pk</h2>
+              <p>
+                A multi-category e-commerce marketplace project
+                built around WordPress and WooCommerce.
+              </p>
+              <div class="project-tags">
+                <span>WordPress</span>
+                <span>WooCommerce</span>
+              </div>
+              <span class="project-link">In Progress</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <span>BL AUTO HUB</span>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Personal Automotive Project</div>
+              <h2>BL Auto Hub</h2>
+              <p>
+                An automotive e-commerce concept for car parts,
+                accessories and engine oils.
+              </p>
+              <div class="project-tags">
+                <span>WordPress</span>
+                <span>WooCommerce</span>
+              </div>
+              <span class="project-link">In Progress</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Abubakar Bhatti. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

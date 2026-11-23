@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Learn more about Hafiz Muhammad Abubakar Bhatti, Software Developer specializing in WordPress, WooCommerce and web development.">
+
+  <title>About Me | Abubakar Bhatti</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .about-hero {
+      padding: 85px 10% 55px;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: clamp(38px, 5vw, 60px);
+      margin: 20px 0;
+    }
+
+    .about-hero h1 span {
+      color: var(--green-light);
+    }
+
+    .about-hero p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.9;
+    }
+
+    .about-section {
+      padding: 50px 10% 90px;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-image {
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 168, 120, 0.3);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 22px;
+}
+
+    .about-content h2 {
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
+
+    .about-content h2 span {
+      color: var(--green-light);
+    }
+
+    .about-content > p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+    .info-card small {
+      display: block;
+      color: var(--green-light);
+      margin-bottom: 8px;
+    }
+
+    .info-card strong {
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .skills-section {
+      padding: 70px 10%;
+      background: var(--surface);
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 span {
+      color: var(--green-light);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 23px 15px;
+      text-align: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--green-light);
+      transform: translateY(-5px);
+    }
+
+    .skill-card h3 {
+      color: var(--green-light);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .education-section {
+      padding: 75px 10%;
+    }
+
+    .education-card {
+      max-width: 750px;
+      margin: auto;
+      padding: 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green-light);
+      border-radius: 12px;
+    }
+
+    .education-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-top: 7px;
+    }
+
+    @media (max-width: 800px) {
+      .about-section {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .about-hero,
+      .about-section,
+      .skills-section,
+      .education-section {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-image {
+        height: 350px;
+        min-height: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+
+    <a class="logo" href="index.html">
+      AB<span>.</span>
+    </a>
+
+    <nav class="navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="header-btn" href="contact.html">
+      Let's Talk <span>↗</span>
+    </a>
+
+    <button class="menu-btn"
+      aria-label="Toggle menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+
+      <p class="eyebrow">GET TO KNOW ME</p>
+
+      <h1>About <span>Me</span></h1>
+
+      <p>
+        A passionate Software Developer focused on building
+        modern websites, e-commerce platforms and practical
+        digital solutions.
+      </p>
+
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+
+      <div class="about-image">
+          <img
+              src="images/abubakar-profile.jpg"
+              alt="Hafiz Muhammad Abubakar Bhatti"
+          >
+      </div>
+
+      <div class="about-content">
+
+        <p class="eyebrow">WHO I AM</p>
+
+        <h2>
+          I'm Hafiz Muhammad
+          <span>Abubakar Bhatti</span>
+        </h2>
+
+        <p>
+          I'm a Software Developer with a Bachelor of Science
+          in Computer Science from Iqra University, Chak Shahzad.
+        </p>
+
+        <p>
+          My work focuses on WordPress development, WooCommerce
+          stores, website customization, PHP development and
+          search engine optimization (SEO).
+        </p>
+
+        <p>
+          I enjoy turning ideas into useful digital experiences.
+          My goal is to create websites that are modern, responsive,
+          user-friendly and focused on business needs.
+        </p>
+
+        <div class="info-grid">
+
+          <div class="info-card">
+            <small>NAME</small>
+            <strong>Hafiz Muhammad Abubakar Bhatti</strong>
+          </div>
+
+          <div class="info-card">
+            <small>PROFESSION</small>
+            <strong>Software Developer</strong>
+          </div>
+
+          <div class="info-card">
+            <small>EDUCATION</small>
+            <strong>BS Computer Science</strong>
+          </div>
+
+          <div class="info-card">
+            <small>SPECIALIZATION</small>
+            <strong>WordPress & WooCommerce</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">WHAT I WORK WITH</p>
+        <h2>My Technical <span>Skills</span></h2>
+        <p>Technologies and tools I use in my development work.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>HTML & CSS</h3>
+          <p>Website Structure & Styling</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>JavaScript</h3>
+          <p>Interactive Web Experiences</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>PHP</h3>
+          <p>Backend Development</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>WordPress</h3>
+          <p>Custom Website Development</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>WooCommerce</h3>
+          <p>E-commerce Solutions</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>SEO</h3>
+          <p>Search Engine Optimization</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Python</h3>
+          <p>Programming & Data Science</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Git & GitHub</h3>
+          <p>Version Control</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Education -->
+    <section class="education-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+        <h2>My <span>Education</span></h2>
+      </div>
+
+      <div class="education-card">
+
+        <p class="eyebrow">2021 – 2025</p>
+
+        <h3>Bachelor of Science in Computer Science</h3>
+
+        <p>Iqra University, Chak Shahzad</p>
+
+        <p>CGPA: 3.19</p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 Abubakar Bhatti. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
